@@ -1,0 +1,96 @@
+{
+	"name": "seltools",
+	"displayName": "Selection Tools",
+	"description": "Multiple mini-tools for manipulating selected or pasted text",
+	"version": "0.0.2",
+	"publisher": "cronoklee",
+	"icon": "seltools.png",
+	"engines": {
+		"vscode": "^1.73.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:seltools.swapQuotes",
+		"onCommand:seltools.cssFormat",
+		"onCommand:seltools.wrapText",
+		"onCommand:seltools.countWordsChars",
+		"onCommand:seltools.toggleCase"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "seltools.swapQuotes",
+				"title": "Swap Quotes"
+			},
+			{
+				"command": "seltools.cssFormat",
+				"title": "Format CSS"
+			},
+			{
+				"command": "seltools.wrapText",
+				"title": "Wrap a Selection with Custom Characters"
+			},
+			{
+				"command": "seltools.countWordsChars",
+				"title": "Count Words & Characters"
+			},
+			{
+				"command": "seltools.toggleCase",
+				"title": "Toggle Case"
+			}
+		],
+		"keybindings": [
+			{
+				"mac": "alt+2",
+				"key": "alt+2",
+				"command": "seltools.swapQuotes",
+				"when": "editorTextFocus"
+			},
+			{
+				"mac": "cmd+shift+v",
+				"key": "ctrl+shift+v",
+				"command": "seltools.cssFormat",
+				"when": "editorTextFocus"
+			},
+			{
+				"key": "alt+t",
+				"command": "seltools.toggleCase",
+				"when": "editorHasSelection"
+			},
+			{
+				"key": "alt+w",
+				"command": "seltools.wrapText",
+				"when": "editorHasSelection"
+			},
+			{
+				"key": "alt+c",
+				"command": "seltools.countWordsChars",
+				"when": "editorHasSelection"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.73.0",
+		"@types/glob": "^8.0.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"eslint": "^8.28.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.1.0",
+		"typescript": "^4.9.3",
+		"@vscode/test-electron": "^2.2.0"
+	},
+	"__metadata": {
+		"isApplicationScoped": false,
+		"installedTimestamp": 1679516117918,
+		"size": 8183
+	}
+}
