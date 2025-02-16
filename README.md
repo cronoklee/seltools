@@ -1,3 +1,6 @@
+![SelTools Logo](seltools.png)
+
+
 SELECTION TOOLS (SELTOOLS) FOR VS CODE
 ======================================
 
@@ -37,7 +40,7 @@ AVAILABLE COMMANDS:
 CONFIGURATION
 ---------------------------------------------------
 
-If hotkeys dont work, you may need to set them manually in
+If hotkeys dont work, you may need to set them manually in File > Preferences > Keyboard shortcuts
 
 
 ---------------------------------------------------
@@ -51,4 +54,4 @@ FEEDBACK & ISSUES
 ---------------------------------------------------
 
 If you encounter any issues or have feature requests, please open an issue on GitHub:
-https://github.com/cronoklee/seltools-vscode/issues
+https://github.com/cronoklee/seltools/issues
